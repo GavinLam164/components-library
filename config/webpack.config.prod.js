@@ -26,11 +26,19 @@ const setPlugins = () => {
     .use(CleanWebpackPlugin)
 }
 
+const setExternals = () => {
+  config
+    .externals({
+      'element-ui':'element-ui'
+    })
+}
+
 const createConfig = (componentName) => {
   config.mode('development')
   setEntry(componentName)
   setOutput(componentName)
   setPlugins()
+  setExternals()
 
   return config
 }

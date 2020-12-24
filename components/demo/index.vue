@@ -1,16 +1,18 @@
 <template>
-<el-button>
-  <span class="lgw">123</span>
-</el-button>
+  <el-button>
+    {{text}}
+  </el-button>
 </template>
 
 <script>
+import { Button } from 'element-ui'
 export default {
+  components: {
+    ElButton: Button
+  },
   props: ['text']
 }
 </script>
 
 <style>
-.lgw {
-}
 </style>
