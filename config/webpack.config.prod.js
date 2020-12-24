@@ -2,10 +2,7 @@
 const config = require('./webpack.config')
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-
-const getComponentPath = (componentName) => {
-  return path.resolve(__dirname, `./../components/${componentName}/index.vue`)
-}
+const getComponentPath = require('./utils').getComponentPath
 
 const setEntry = (componentName) => {
   config
@@ -34,7 +31,7 @@ const setExternals = () => {
 }
 
 const createConfig = (componentName) => {
-  config.mode('development')
+  config.mode('production')
   setEntry(componentName)
   setOutput(componentName)
   setPlugins()

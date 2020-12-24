@@ -3,6 +3,7 @@ const config = require('./webpack.config')
 const webpack = require('webpack')
 const HtmlWepbackPlugin = require('html-webpack-plugin')
 const path = require('path')
+const getComponentPath = require('./utils').getComponentPath
 
 const setPlugins = () => {
   const plugin = config.plugin.bind(config)
@@ -13,10 +14,6 @@ const setPlugins = () => {
     }])
   plugin('hot')
     .use(webpack.HotModuleReplacementPlugin)
-}
-
-const getComponentPath = (componentName) => {
-  return path.resolve(__dirname, `./../components/${componentName}/index.vue`)
 }
 
 const setResolve = (componentName) => {
