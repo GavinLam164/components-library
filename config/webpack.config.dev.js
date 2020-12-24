@@ -25,7 +25,7 @@ const setResolve = (componentName) => {
 const setEntry = () => {
   config
     .entry('main')
-      .add('/main.js')
+      .add('./src/main.js')
       .add('webpack-hot-middleware/client')
       .end()
 }
