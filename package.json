@@ -1,0 +1,42 @@
+{
+  "name": "components-library",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "workspaces": [
+    "components/*"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node ./scripts/dev.js",
+    "build": "node ./scripts/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GavinLam164/components-library.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "commander": "^6.2.1",
+    "css-loader": "^5.0.1",
+    "express": "^4.17.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "url-loader": "^4.1.1",
+    "vue": "^2.6.12",
+    "vue-loader": "^15.9.6",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^5.11.0",
+    "webpack-chain": "^6.5.1",
+    "webpack-dev-middleware": "^4.0.2",
+    "webpack-hot-middleware": "^2.25.0"
+  },
+  "dependencies": {
+    "element-ui": "^2.14.1"
+  }
+}
